@@ -159,7 +159,7 @@ max_units = 100     # the number of sample units to be tested
 
 ## Ground Truth Data and Question Generation
 
-The ground truth data files are in CSV format, consisting of all necessary keys for questions and corresponding answers. To form a prompt (or question), you must also prepare a JSON configuration file, containing the components below:
+If you want to construct a benchmark using your own dataset, this is how you can do. The ground truth data files are in CSV format, consisting of all necessary keys for questions and corresponding answers. To form a prompt (or question), you must also prepare a JSON configuration file, containing the components below:
 
 - `task_name`: The name of the task
 - `input_mode`: The mode of input, either choose `structured` to form questions using different question templates, or choose `qa_pairs` to directly feed in question-answer pairs.
@@ -188,19 +188,13 @@ Keys below are optional:
 ### Perturbation Analysis Data
 
 ### `Adamson`
-- Path: `/.gpfs/radev/project/zhao/tl688/data/adamson`
-- Perturbation Type: CRISPRi
 - Cell Line: `K562`
 - Source: Adamson *et al.* , A Multiplexed Single-Cell CRISPR Screening Platform Enables Systematic Dissection of the Unfolded Protein Response. *Cell* **167**, 1867-1882.e21 (2016). DOI: [10.1016/j.cell.2016.11.048](https://doi.org/10.1016/j.cell.2016.11.048)
     
 ### `Norman`
-- Path: `./gpfs/radev/project/zhao/tl688/data/norman`
-- Perturbation Type: CRISPRa
 - Cell Line: `K562`
 - Source: Thomas M. Norman *et al.* ,Exploring genetic interaction manifolds constructed from rich single-cell phenotypes.*Science* **365**,786-793(2019).DOI:[10.1126/science.aax4438](https://www.science.org/doi/10.1126/science.aax4438)
 
 ### `Replogle`
-- Path: .`/gpfs/radev/project/zhao/tl688/data/reploge`
-- Perturbation Type: CRISPRi
 - Cell Line: `K562`, `RPE1`
 - Source: Replogle J.M. *et al.* , Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq. *Cell* **185**, 2559-2575.e28 (2022). DOI: [10.1016/j.cell.2022.05.013](https://ncbi.nlm.nih.gov/pubmed/35688146)
