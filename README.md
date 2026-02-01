@@ -14,7 +14,7 @@ This benchmark tests whether an agent can correctly answer gene perturbation QA 
 It measures:
 - **Correctness**: accuracy vs. gold labels
 
-- **Robustness**: invalid / ambiguous outputs (especially under multi-template voting)
+- **Robustness**: consistency of answers when asked repeatedly (especially under multi-template voting)
 
 - **Efficiency**: calls and token usage
 
