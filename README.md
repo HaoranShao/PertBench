@@ -8,7 +8,7 @@ The current release includes a concrete instantiation for **single-cell perturba
 
 This benchmark tests whether an agent can correctly answer gene perturbation QA questions such as:
 - "Does perturbing gene A significantly change expression of gene B in cell line X?"
-- "Does perturbing gene A and perturbing gene B significantly change expression of gene B in cell line X?"
+- "Does perturbing gene A and perturbing gene B significantly change expression of gene C in cell line X?"
 - “In X cells, gene A and gene B are perturbed and gene C expression is quantified. Does this perturbation result in a significant change in gene C expression compared with control cells?”
 
 It measures:
