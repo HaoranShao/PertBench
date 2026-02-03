@@ -413,7 +413,7 @@ async def fetch_agent_identity(endpoint: str) -> dict[str, str]:
         return {"name": "", "version": "", "url": endpoint}
 
 
-async def call_purple(question: str, purple_url: str, *, streaming: bool = False) -> str:
+async def call_purple(question: str, purple_url: str, *, streaming: bool = True) -> str:
     async with httpx.AsyncClient(timeout=60, trust_env=False) as httpx_client:
         resolver = A2ACardResolver(httpx_client=httpx_client, base_url=purple_url)
         agent_card = await resolver.get_agent_card()
@@ -638,7 +638,7 @@ class Agent:
                     preds_parsed: List[str] = []
 
                     for q in questions:
-                        raw = await call_purple(q, purple_url, streaming=False)
+                        raw = await call_purple(q, purple_url, streaming=True)
                         calls += 1
 
                         # 1) parse label
@@ -712,7 +712,7 @@ class Agent:
                     if "question" not in row:
                         raise KeyError("qa_pairs mode requires CSV column 'question'")
 
-                    raw = await call_purple(row["question"], purple_url, streaming=False)
+                    raw = await call_purple(row["question"], purple_url, streaming=True)
                     calls += 1
 
                     parsed = parse_final_answer(raw)
